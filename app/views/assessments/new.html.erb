@@ -1,0 +1,6 @@
+<h1>Update your assessment</h1>
+  <%= form_for (@assessment) do |f| %>
+  	<%= f.label :title%>
+    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.submit "Save changes", class: "btn btn-primary" %>
+<% end %>
