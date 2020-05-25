@@ -27,3 +27,5 @@ import '../stylesheets/application'
 //= require jquery_ujs
 
 import 'cocoon-js'
+
+//= require cocoon

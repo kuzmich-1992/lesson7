@@ -6,12 +6,12 @@ class AssessmentsController < ApplicationController
   end
 
   def create
-    @assessment = Assessment.build(assessment_params)
+    @assessment = Assessment.new
   end
 
   private
 
   def assessment_params
-    params.require(:assessment).permit(:title,question_attributes: [:text])
+    params.require(:assessment).permit(:title)
   end
 end
