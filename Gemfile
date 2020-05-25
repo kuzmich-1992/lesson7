@@ -58,3 +58,6 @@ gem 'devise'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'cocoon'
+gem 'sprockets-rails'
+gem 'jquery-rails'
+gem "haml-rails"

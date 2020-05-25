@@ -20,3 +20,10 @@ require("channels")
 require jquery3
 require popper
 require bootstrap
+
+import '../stylesheets/application'
+
+//= require jquery
+//= require jquery_ujs
+
+import 'cocoon-js'
