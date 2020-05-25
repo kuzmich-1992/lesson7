@@ -12,6 +12,6 @@ class AssessmentsController < ApplicationController
   private
 
   def assessment_params
-    params.require(:assessment).permit(:title)
+    params.require(:assessment).permit(:title, questions_attributes:[:id, :text])
   end
 end
