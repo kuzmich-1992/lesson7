@@ -778,6 +778,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
+"@kollegorna/cocoon-vanilla-js@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@kollegorna/cocoon-vanilla-js/-/cocoon-vanilla-js-1.0.3.tgz#a77a91ba15789409292ca3350e0ef37c01bb8ad8"
+  integrity sha512-d6uM/8/T+QyI4KNTCFNLHLuWXL1O3GVXIf+H71iDTH7A7osAG4r/D65yeGWV3wYGZBrK+2l3ayxKNzVmra6nLg==
+
 "@rails/actioncable@^6.0.0":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.3.tgz#722b4b639936129307ddbab3a390f6bcacf3e7bc"
@@ -1419,10 +1424,10 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap@4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
-  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
+bootstrap@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.5.0.tgz#97d9dbcb5a8972f8722c9962483543b907d9b9ec"
+  integrity sha512-Z93QoXvodoVslA+PWNdk23Hze4RBYIkpb5h8I2HY2Tu2h7A0LpAgLcyrhrSUyo2/Oxm2l1fRZPs1e5hnxnliXA==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1797,9 +1802,9 @@ cocoon-js@^0.0.5:
   dependencies:
     jquery "^3.2.1"
 
-"cocoon@github:nathanvda/cocoon#c24ba53":
-  version "1.2.10"
-  resolved "https://codeload.github.com/nathanvda/cocoon/tar.gz/c24ba53b40e688e7d8b7212824139ec7f352a242"
+"cocoon@github:nathanvda/cocoon":
+  version "0.0.0"
+  resolved "https://codeload.github.com/nathanvda/cocoon/tar.gz/6364ce5c284e574496e6007f24f5a13843fcb0d2"
 
 code-point-at@^1.0.0:
   version "1.1.0"

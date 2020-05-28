@@ -1,0 +1,5 @@
+%h1= @assessment.title
+- @assessment.questions.each_with_index do |question, index|
+  %span= index + 1
+  %span= question.text
+  %br

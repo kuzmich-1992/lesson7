@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
   <p class="navbar-text float-right">
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
@@ -18,6 +20,7 @@
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
   <% end %>
   </p>
+  </header>
   <body>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
