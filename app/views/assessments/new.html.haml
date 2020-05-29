@@ -9,6 +9,6 @@
     = form.fields_for :questions, @assessment.questions.build do |question| 
       = render 'question', f: question
     .links
-      = link_to_add_association 'Add', form, :questions, partial: 'question'
+      = link_to_add_association 'Add-question', form, :questions, partial: 'question'
   .actions
     = form.submit 'Save' 

@@ -1,6 +1,6 @@
 class AssessmentsController < ApplicationController
   before_action :authenticate_user! #,only: [:index, :edit, :update]
-  #before_action :set_assessment, only: %i[show]
+  before_action :set_assessment, only: %i[show]
 
   def index
     @assessments = Assessment.all
