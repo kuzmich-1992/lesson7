@@ -19,30 +19,19 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1/edit
   # def edit
+  #   @question = Question.find(params[:id])
   # end
 
   # POST /questions
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-
-    respond_to do |format|
-      if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
-        format.json { render :show, status: :created, location: @question }
-      else
-        format.html { render :new }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
-  # PATCH/PUT /questions/1
-  # PATCH/PUT /questions/1.json
   def update
     respond_to do |format|
       if @question.update(question_params)
-        format.html { redirect_to @question, notice: 'Question was successfully updated.' }
+        format.html { redirect_to variants_path, notice: 'Question was successfully updated.' }
         format.json { render :show, status: :ok, location: @question }
       else
         format.html { render :edit }
@@ -56,7 +45,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
     respond_to do |format|
-      format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
+      format.html { redirect_to questions_url, notice: 'question was destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,10 +53,10 @@ class QuestionsController < ApplicationController
   private
   
     def set_question
-      @question = Question.find(params[:id])
+      @question = Question.find_by(id: params[:id])
     end
 
     def question_params
-      params.require(:question).permit(:text)
+      params.require(:question).permit(:text, variants_attributes:[:id, :text, :value,:_destroy])
     end
 end

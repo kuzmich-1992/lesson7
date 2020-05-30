@@ -1,6 +1,6 @@
 class AssessmentsController < ApplicationController
   before_action :authenticate_user! #,only: [:index, :edit, :update]
-  before_action :set_assessment, only: %i[show]
+  before_action :set_assessment, only: [:show, :edit, :update, :destroy]
 
   def index
     @assessments = Assessment.all
@@ -27,6 +27,14 @@ class AssessmentsController < ApplicationController
       end
   end
 
+  def destroy
+    @assessment.destroy
+    respond_to do |format|
+      format.html { redirect_to assessments_url, notice: 'assessment was destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
   def set_assessment
@@ -34,6 +42,6 @@ class AssessmentsController < ApplicationController
   end
 
   def assessment_params
-    params.require(:assessment).permit(:title, questions_attributes:[:id, :text])
+    params.require(:assessment).permit(:title, questions_attributes:[:id, :text, :_destroy])
   end
 end

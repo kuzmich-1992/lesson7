@@ -2,13 +2,4 @@
 - @assessment.questions.each_with_index do |question, index|
   %span= index + 1
   %span= question.text
-  = form_for question do |form| 
-    %h8 Variants
-    #variants
-      = form.fields_for :variants, question.variants.build do |variant| 
-        = render 'variant', f: variant
-      .links
-        = link_to_add_association 'Add-variant', form, :variants, partial: 'variant'
-    .actions
-      = form.submit 'Save' 
-  %br
+%br
