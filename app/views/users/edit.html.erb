@@ -1,8 +1,10 @@
+<div class="jumbotron text-center">
 <h1>Update your profile</h1>
+</div>
   <%= form_for (@user) do |f| %>
   	<%= f.label :first_name %>
     <%= f.text_field :first_name, class: 'form-control' %>
     <%= f.label :last_name %>
     <%= f.text_field :last_name, class: 'form-control' %>
-    <%= f.submit "Save changes", class: "btn btn-primary" %>
-  <% end %>
+    <%= f.submit "Save changes", class: "btn btn-lg btn-primary" %>
+<% end %>
