@@ -51,12 +51,12 @@ class QuestionsController < ApplicationController
   end
 
   private
-  
-    def set_question
-      @question = Question.find_by(id: params[:id])
-    end
 
-    def question_params
-      params.require(:question).permit(:text, variants_attributes:[:id, :text, :value,:_destroy])
-    end
+  def set_question
+    @question = Question.find_by(id: params[:id])
+  end
+
+  def question_params
+    params.require(:question).permit(:text, :variants, variants_attributes:[:id, :text, :value, :_destroy])
+  end
 end
