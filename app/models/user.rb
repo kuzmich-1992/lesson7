@@ -5,6 +5,10 @@ class User < ApplicationRecord
   has_many :user_roles
   has_many :roles, through: :user_roles
   
+  mount_uploader :avatar, AvatarUploader
+
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

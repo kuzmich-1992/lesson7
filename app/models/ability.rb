@@ -1,13 +1,12 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.admin?
+    can :show, User, :id => user.id
+    if user.role?(:admin)
       can :manage, :all
     else
-      can :read, :all
+      can :show, User, :id => user.id
     end
   end
 end

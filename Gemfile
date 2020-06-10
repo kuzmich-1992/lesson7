@@ -65,6 +65,7 @@ gem "slim"
 gem "slim-rails", :require => false
 gem 'simple_form'
 gem 'cancancan'
-
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
 
 

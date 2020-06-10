@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
 
   before_action :authenticate_user!
 
@@ -48,6 +49,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name)
+    params.require(:user).permit(:first_name, :last_name, :avatar)
   end
 end
