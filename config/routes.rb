@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   	sign_out: 'logout'
 
   }
+
+  get 'logout' => 'devise/sessions#destroy'
   
   resources :questions
   resources :users
