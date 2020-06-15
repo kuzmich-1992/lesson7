@@ -65,4 +65,5 @@ gem "slim"
 gem "slim-rails", :require => false
 gem 'simple_form'
 gem "pundit"
+gem "paperclip", "~> 6.0.0"
 
