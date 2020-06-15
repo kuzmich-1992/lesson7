@@ -64,4 +64,5 @@ gem "haml-rails"
 gem "slim"
 gem "slim-rails", :require => false
 gem 'simple_form'
+gem "pundit"
 
