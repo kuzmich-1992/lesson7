@@ -20,4 +20,5 @@ require("jquery")
 
 import 'cocoon';
 import 'bootstrap';
+import './adposts.js'
 
