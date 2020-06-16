@@ -1,0 +1,26 @@
+<%= javascript_pack_tag 'adposts'%>
+<% provide(:title, 'All Adposts') %>
+<nav class="navbar navbar-expand-sm bg-light">
+</nav>
+<h1>All Adposts</h1>
+<ul class="adposts">
+  <% @adposts.each do |adpost| %>
+    <li>
+    <table>
+    <td><%= adpost.title %></td>
+    <td><%= adpost.description %></td>
+    <td><%= adpost.company_name %></td>
+    </table>
+    </li>                                   
+  <% end %>
+  <div class='adpost-edit-form'></div>
+    <%= form_for :adpost do |f| %>
+    <td><%= f.label :title %></td>
+    <td><%= f.text_field :title %></td>
+    <td><%= f.label :description %></td>
+    <td><%= f.text_field :description %></td>
+    <td><%= f.label :company_name %></td>
+    <td><%= f.text_field :company_name %></td>
+    <td><%= f.submit %></td>
+  <% end %>
+</ul>

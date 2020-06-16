@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @users = User.all
+    authorize @users
   end
 
   def new
     @user = User.new
+    authorize @user
   end
 
   def create
@@ -15,6 +19,7 @@ class UsersController < ApplicationController
     else
       render 'validation error'
     end
+    authorize @user
   end
 
   def show
@@ -23,6 +28,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    authorize @user
   end
 
   def update
@@ -32,6 +38,7 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+    authorize @user
   end
 
   def destroy
@@ -41,12 +48,12 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'user was destroyed.' }
       format.json { head :no_content }
     end
+    authorize @user
   end
-
 
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name)
+    params.require(:user).permit(:first_name, :last_name, :avatar)
   end
 end
